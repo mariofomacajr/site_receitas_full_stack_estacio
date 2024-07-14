@@ -1,0 +1,98 @@
+/* estilizacao da pagina de formatos- formatos.css */
+
+/* a) logo */
+.logo {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.logo img {
+  width: 100%;
+  filter: brightness(1000%);  /* preciso inverter a cor da silhueta do darth vader */
+  /* mix-blend-mode: difference; */
+}
+
+/* b) areas semânticas */
+body {
+  background-color: black;
+  color: #FFE81F;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Utiliza flexbox para organizar o conteúdo */
+  min-height: 100vh; 
+}
+
+.container {
+  flex: 1; /* isso faz com que o container ocupe dinamicamente o espaço disponivel */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  perspective: 1000px;
+}
+
+.content {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: crawl 12s linear infinite;
+}
+
+
+body {
+  font-size: 24px;
+  line-height: 1.5;
+ 
+}
+
+
+
+main {
+  background-color: #181717; 
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+
+header h1 {
+  margin-top: 50px;
+} 
+
+p {
+  margin-bottom: 1rem;
+}
+
+/*efeito star wars */
+.star-wars-text {
+  display: flex;
+  flex-direction: column; 
+  gap: 1rem; 
+}
+
+.menu {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+}
+
+.menu-link {
+  font-size: 1.2rem;
+  color: #FFE81F;
+  text-decoration: none;
+  margin-right: 1rem; 
+}
+
+@keyframes crawl {
+  0% {
+    transform: translateY(100vh);
+  }
+
+  100% {
+    transform: translateY(-100vh);
+  }
+}
